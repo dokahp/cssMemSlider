@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 :root {
   --width: 70vw;
 }
@@ -10,4 +11,11 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  font-family: 'Mouse Memoirs', sans-serif;
 }
