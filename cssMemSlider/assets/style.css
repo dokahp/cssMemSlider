@@ -49,6 +49,7 @@ body {
   width: 100%;
   z-index: 2;
   background-color: rgb(66, 58, 58);
+  padding-left: 5rem;
 }
 .slide {
   display: block;
@@ -191,4 +192,22 @@ body {
 #slide4:checked ~ .description {
   transform: translateX(-75%);
   transition: transform 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --width: 90vw;
+  }
+  .slider-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .radio-controls {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .description {
+    order: 1;
+    align-self: flex-start;
+  }
 }
