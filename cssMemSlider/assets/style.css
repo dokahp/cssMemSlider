@@ -60,7 +60,7 @@ body {
   background-position: center;
 }
 .slide-1 {
-  background-image: url(./img/mem1.jpeg);
+  background-image: url(./img/mem5.jpeg);
 }
 .slide-2 {
   background-image: url(./img/mem2.png);
@@ -90,7 +90,22 @@ body {
   transform: translateX(-75%);
   transition: transform 0.8s ease-in-out;
 }
-
+.description {
+  display: flex;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  align-self: start;
+  width: calc(var(--width) * 4);
+  color: #ececd7;
+  transform: translateX(calc(var(--width) * -4));
+  transition: transform 0.8s ease-in-out;
+}
+.description .text {
+  width: 100%;
+  font-size: 2rem;
+  transition: transform 0.4s ease-in-out;
+  letter-spacing: 0.15em;
+}
 .label {
   display: flex;
   justify-content: center;
@@ -98,6 +113,9 @@ body {
   padding: 1rem;
   border-radius: 50%;
   cursor: pointer;
+}
+.label:last-child {
+  padding: 1rem 0 1rem 1rem;
 }
 
 .label:hover .round-dot {
@@ -154,4 +172,23 @@ body {
 #slide4:checked ~ .radio-controls > .label-4:hover span {
   border-color: #ececd7;
   transition: border 0.5s ease-in-out;
+}
+#slide1:checked ~ .description {
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+#slide2:checked ~ .description {
+  transform: translateX(-25%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#slide3:checked ~ .description {
+  transform: translateX(-50%);
+  transition: transform 0.4s ease-in-out;
+}
+
+#slide4:checked ~ .description {
+  transform: translateX(-75%);
+  transition: transform 0.4s ease-in-out;
 }
